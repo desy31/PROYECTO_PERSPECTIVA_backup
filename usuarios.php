@@ -103,7 +103,7 @@
      &nbsp;&nbsp;
     Identidad: <input type="text" name="identidad" placeholder="Indentidad" hspace="10">
      <br>
-    Teléfono:  <input type="text" name="telefono" placeholder="Telefono"hspace="79">
+    Telefono:  <input type="text" name="telefono" placeholder="Telefono"hspace="79">
     Fecha de Ingreso <input type="date" name="fecha" placeholder="Fecha">
     <br>
     Estado:  <input type="text" name="estado" placeholder="Estado"hspace="89"> 
@@ -145,7 +145,7 @@
         <th><strong>Descripción</strong></th>
         <th><strong>Estado</strong></th>
         <th><strong>Fecha de Ingreso</strong></th>
-        <th><strong>Teléfono</strong></th>
+        <th><strong>Telefono</strong></th>
         <th><strong>Rol</strong></th>
         <th><strong>Borrar</strong></th>
       </tr>
@@ -164,7 +164,7 @@
               <td>N/A</td>
               <td>N/A</td>
               <td>N/A</td>
-              <td>N/A</td>
+              <td>'.$row->Telefono.'</td>
               <td>'.$row->Rol.'</td>
               <td><a href="agregar_usuario.php?idusuario='.$row->IdUsuario.'">Borrar</a></td>
             </tr>

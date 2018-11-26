@@ -9,10 +9,10 @@
 	$db="clinica_dental";
 	$error_msg = false;
 
-	// Create connection
+	// Crear conexion 
 	$con = mysql_connect($servername, $username, $password);
 
-	// Check connection
+	// revisa conexion
 	if (!$con) {
 	    die("Connection failed: " . mysqli_connect_error());
 	}
