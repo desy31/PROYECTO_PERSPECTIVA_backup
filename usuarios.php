@@ -142,7 +142,6 @@
         <th><strong>Nombre Usuario</strong></th>
         <th><strong>Usuario</strong></th>
         <th><strong>Identidad</strong></th>
-        <th><strong>Descripción</strong></th>
         <th><strong>Estado</strong></th>
         <th><strong>Fecha de Ingreso</strong></th>
         <th><strong>Telefono</strong></th>
@@ -160,7 +159,6 @@
               <td>'.$row->IdUsuario.'</td>
               <td>'.$row->Nombre.'</td>
               <td>'.$row->Usuario.'</td>
-              <td>N/A</td>
               <td>N/A</td>
               <td>N/A</td>
               <td>N/A</td>
