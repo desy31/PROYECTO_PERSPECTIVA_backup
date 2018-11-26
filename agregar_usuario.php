@@ -3,17 +3,33 @@
   include ("validar_login.php");
 ?>
 <?php
-	if ($_POST['nombre'] && $_POST['usuario'] && $_POST['password'] && $_POST['rol']) {
+	if (isset($_POST['nombre']) && isset($_POST['usuario']) && isset($_POST['password']) && isset($_POST['rol'])) {
 		$accion = "";
+		$es_admin = $_SESSION["usuario_actual_rol"] === 'admin';
 
-		if ($_SESSION["usuario_actual_rol"] === 'admin' && isset($_POST['Guardar'])) {
+		if ($es_admin && isset($_POST['Guardar'])) {
 			$accion = "Ingresado";
 			$sql = "INSERT INTO usuario (`IdUsuario`, `Usuario`, `Password`, `Rol`, `Nombre`) VALUES (NULL,'".$_POST['usuario']."','".$_POST['password']."','".$_POST['rol']."','".$_POST['nombre']."')";
-		}else if ($_SESSION["usuario_actual_rol"] === 'admin' && isset($_POST['Modificar'])) {
+		}else if ($es_admin && isset($_POST['Modificar'])) {
 			$accion = "Modificado";
 			$sql = "UPDATE `usuario` SET `IdUsuario`='".$_POST['idusuario']."',`Usuario`='".$_POST['usuario']."',`Password`='".$_POST['password']."',`Rol`='".$_POST['rol']."',`Nombre`='".$_POST['nombre']."' WHERE IdUsuario = '".$_POST['idusuario']."'";
+		}else if ($es_admin && isset($_GET['idusuario'])) {
+			$accion = "Eliminado";
+			$sql = "DELETE FROM `usuario` WHERE IdUsuario = '".$_GET['idusuario']."'";
 		}
 
+		if (mysql_query($sql, $con)) {
+			echo "<script>
+				alert('Usuario '".$accion."'');</script>";
+		}else{
+			echo "<script> alert('Error al '".$accion."' usuario');</script>";
+		}
+		echo "<script>
+			location.replace('usuarios.php');
+			</script>";
+	}else if (isset($_GET['idusuario'])) {
+		$accion = "Eliminado";
+			$sql = "DELETE FROM `usuario` WHERE IdUsuario = '".$_GET['idusuario']."'";
 		if (mysql_query($sql, $con)) {
 			echo "<script>
 				alert('Usuario '".$accion."'');</script>";

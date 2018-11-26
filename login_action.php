@@ -13,9 +13,7 @@
     if ($logged==0) {
       echo "<script> alert('Usuario o Contraseña incorrectos'); location.replace('LOGI.php'); </script>";
     }else{
-      // echo "<script>localStorage.setItem('usuario_actual','".$_POST['nombre']."');</scrip>";
-      // localStorage.getItem("usuario_actual");
-      // localStorage.removeItem("usuario_actual");
+ 
       $_SESSION["usuario_actual"] = $_POST['nombre'];
       $_SESSION["usuario_actual_rol"] = $row->Rol;
       echo "<script>location.replace('principal.php'); </script>";

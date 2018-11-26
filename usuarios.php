@@ -121,7 +121,7 @@
    <div class="botones">
     <input type="submit" name="Guardar" value="Guardar" style='width:90px; height:35px' >
     <input type="submit" name="Modificar" value="Modificar"style='width:90px; height:35px' >
-    <input type="button" name="Eliminar" value="Eliminar"style='width:90px; height:35px' >
+    <input type="submit" name="Eliminar" value="Eliminar"style='width:90px; height:35px' >
     <input type="button" name="Limpiar" value="Limpiar" style='width:90px; height:35px'>
     <input type="button" name="Atras" value="Atras" style='width:90px; height:35px' onclick="location.href = 'principal.php'">
 
@@ -147,6 +147,7 @@
         <th><strong>Fecha de Ingreso</strong></th>
         <th><strong>Teléfono</strong></th>
         <th><strong>Rol</strong></th>
+        <th><strong>Borrar</strong></th>
       </tr>
        
        <?php
@@ -154,19 +155,20 @@
          die("mySQL error: ". mysql_error());
        }else{
         while ($row = mysql_fetch_object($res)) {
-          echo "
+          echo '
             <tr>
-              <td>$row->IdUsuario</td>
-              <td>$row->Nombre</td>
-              <td>$row->Usuario</td>
+              <td>'.$row->IdUsuario.'</td>
+              <td>'.$row->Nombre.'</td>
+              <td>'.$row->Usuario.'</td>
               <td>N/A</td>
               <td>N/A</td>
               <td>N/A</td>
               <td>N/A</td>
               <td>N/A</td>
-              <td>$row->Rol</td>
+              <td>'.$row->Rol.'</td>
+              <td><a href="agregar_usuario.php?idusuario='.$row->IdUsuario.'">Borrar</a></td>
             </tr>
-          ";
+          ';
         }
        }
        ?>
