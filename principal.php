@@ -21,8 +21,13 @@
    <img  class="logo"src="img\blanco.png">
 	<nav> 
 	  <ol>
-	    <li><img src="img\doc.png"/><a href="usuarios.php">Usuario</a></li>
+      <?php
+      if($_SESSION["usuario_actual_rol"]=="admin")
+      {
+	    echo'<li><img src="img\doc.png"/><a href="usuarios.php">Usuario</a></li>';
+      }
 
+?>
 	    <li><img src="img\pacientes.png"/><a href="datos_generales.php">Pacientes</a></li>
 
 	    <li><img src="img\agenda.png"/><a href="fechaconsulta.php">Agenda</a></li>
