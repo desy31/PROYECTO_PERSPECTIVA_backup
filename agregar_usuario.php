@@ -1,6 +1,8 @@
 <?php
   include ("conexion.php");
   include ("validar_login.php");
+  include ("encrypt_password.php");
+
 ?>
 
 <!-- proceso para hacer funcionar los botones-->
@@ -8,15 +10,16 @@
 	if (isset($_POST['nombre']) && isset($_POST['usuario']) && isset($_POST['password']) && isset($_POST['rol'])  && isset($_POST['telefono'])) {
 		$accion = "";
 		$es_admin = $_SESSION["usuario_actual_rol"] === 'admin';
+		$encpassword = encrypt_decrypt($_POST['password'],true)
 
 		if ($es_admin && isset($_POST['Guardar'])) {
 			$accion = "Ingresado";
-			$sql = "INSERT INTO `usuario`(`IdUsuario`, `Usuario`, `Password`, `Rol`, `Nombre`, `Telefono`) VALUES (NULL,'".$_POST['usuario']."','".$_POST['password']."','".$_POST['rol']."','".$_POST['nombre']."','".$_POST['telefono']."')";
+			$sql = "INSERT INTO `usuario`(`IdUsuario`, `Usuario`, `Password`, `Rol`, `Nombre`, `Telefono`) VALUES (NULL,'".$_POST['usuario']."','".$encpassword."','".$_POST['rol']."','".$_POST['nombre']."','".$_POST['telefono']."')";
 
 
 		}else if ($es_admin && isset($_POST['Modificar'])) {
 			$accion = "Modificado";
-			$sql = "UPDATE `usuario` SET `IdUsuario`='".$_POST['idusuario']."',`Usuario`='".$_POST['usuario']."',`Password`='".$_POST['password']."',`Rol`='".$_POST['rol']."',`Nombre`='".$_POST['nombre']."' WHERE IdUsuario = '".$_POST['idusuario']."'";
+			$sql = "UPDATE `usuario` SET `IdUsuario`='".$_POST['idusuario']."',`Usuario`='".$_POST['usuario']."',`Password`='".$encpassword."',`Rol`='".$_POST['rol']."',`Nombre`='".$_POST['nombre']."' WHERE IdUsuario = '".$_POST['idusuario']."'";
 
 		}else if ($es_admin && isset($_GET['idusuario'])) {
 			$accion = "Eliminado";
