@@ -10,7 +10,7 @@
 	if (isset($_POST['nombre']) && isset($_POST['usuario']) && isset($_POST['password']) && isset($_POST['rol'])  && isset($_POST['telefono'])) {
 		$accion = "";
 		$es_admin = $_SESSION["usuario_actual_rol"] === 'admin';
-		$encpassword = encrypt_decrypt($_POST['password'],true)
+		$encpassword = encrypt_decrypt($_POST['password'],true);
 
 		if ($es_admin && isset($_POST['Guardar'])) {
 			$accion = "Ingresado";
