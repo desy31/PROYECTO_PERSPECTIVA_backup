@@ -49,7 +49,7 @@
          {
             width:100%;
             position: relative;
-            left: 80px;
+            left: 30px;
 
           }
 
@@ -130,25 +130,28 @@
         
         <img  class="muela" src="img\pacientes.png">
 
-  Nombre y Apellido: <input type="text" name="nombre" placeholder="Nombre" >
-&nbsp;&nbsp;&nbsp;
-  Identidad: <input type="text" name="identidad" placeholder="Identidad" hspace="5">
-  <br>  
-  Edad: <input type="text" placeholder="Edad" name="edad" hspace="93">
-  Fecha de nacimiento: <input name="fecha" type="date"hspace="2" >
-  <br>  
-  Estado civil: <input type="text" name="estadocivil" placeholder="Estado civil" hspace="49" ></td>
-  Nacionalidad: <input type="text" name="nacionalidad" placeholder="Nacionalidad" hspace="5">
-  <br>  
-  Telefóno: <input type="text" name="telefono" placeholder="Telefóno" hspace="70">
-  Sexo: <select name="sexo" hspace="60"> 
-  <option>Masculino</option>
-  <option>Femenino</option>
+     
+          Nombre y Apellido: <input type="text" name="nombre" placeholder="Nombre">
+          Identidad: <input type="text" name="identidad" placeholder="Identidad" hspace="75">
+    
+      <br>
+          Edad: <input type="text" placeholder="Edad" name="edad" hspace="93">
+          Fecha de nacimiento: <input name="fecha" type="date"hspace="2">
+      
+      <br>
+           Estado civil: <input type="text" name="estadocivil" placeholder="Estado civil" hspace="49">
+          Nacionalidad: <input type="text" name="nacionalidad"placeholder="Nacionalidad" hspace="5">
+      
+      <br>
+          Telefóno: <input type="text" name="telefono" placeholder="Telefóno" hspace="70">
 
-</select>
-<br>  
-Dirección: <input type="text" name="direccion" placeholder="Dirección" size=77 hspace="63">
-
+          Sexo: <select name="sexo" hspace="60"> 
+          <option>Masculino</option>
+          <option>Femenino</option>
+     
+          </select>
+        <br>
+          Dirección: <input type="text" name="direccion" placeholder="Dirección" size=77 hspace="63"> 
 <br>
 <br>
 <br>
