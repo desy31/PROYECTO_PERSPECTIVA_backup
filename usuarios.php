@@ -73,8 +73,6 @@
             left: 150px;
            }
 
-    </body>
-
   </style>
 </head>
 
@@ -114,7 +112,7 @@
     <br>
     Usuario: <input type="text" name="usuario" placeholder="Usuario"hspace="85">
     <br>
-    Contraseña:  <input type="text" name="password" placeholder="Contraseña"hspace="56">
+    Contraseña:  <input type="password" name="password" placeholder="Contraseña"hspace="56">
     <br>
     <br>
 
