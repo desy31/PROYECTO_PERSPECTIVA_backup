@@ -97,22 +97,36 @@
     <br>
     <br>
 
-    Nombre y Apellido: <input type="text" name="nombre" placeholder="Nombre" hspace="8">
-     &nbsp;&nbsp;
-    Identidad: <input type="text" name="identidad" placeholder="Indentidad" hspace="10">
-     <br>
-    Telefono:  <input type="text" name="telefono" placeholder="Telefono"hspace="79">
-    Fecha de Ingreso <input type="date" name="fecha" placeholder="Fecha">
-    <br>
-    Estado:  <input type="text" name="estado" placeholder="Estado"hspace="89"> 
-    Nivel de Privilegio: <select name="rol" hspace="60"> 
-      <option value="admin">admin</option>
-      <option value="normal">normal</option>
-  </select>
-    <br>
-    Usuario: <input type="text" name="usuario" placeholder="Usuario"hspace="85">
-    <br>
-    Contraseña:  <input type="password" name="password" placeholder="Contraseña"hspace="56">
+
+   <table>
+
+    <tr>
+          <td>Nombre y Apellido: <input type="text" name="nombre" placeholder="Nombre" hspace="8"></td> 
+
+          <td>Identidad: <input type="text" name="identidad" placeholder="Indentidad" hspace="75"></td>
+     </tr> 
+       
+      <tr>
+           <td>Telefono:  <input type="text" name="telefono" placeholder="Telefono"hspace="79"></td>
+          
+           <td>Fecha de Ingreso <input type="date" name="fecha" placeholder="Fecha" hspace="22" style="width: 173px;"></td>
+      </tr>
+      
+      <tr>
+           <td>Estado:  <input type="text" name="estado" placeholder="Estado"hspace="89"> </td>
+           
+           <td>Nivel de Privilegio: <select name="rol"> 
+           <option value="admin">admin</option>
+           <option value="normal">normal</option>
+           </select></td>
+       </tr>
+       <tr>
+           <td>Usuario: <input type="text" name="usuario" placeholder="Usuario"hspace="85"></td>
+            
+           <td>Contraseña:  <input type="password" name="password" placeholder="Contraseña"hspace="56"></td>
+        </tr>
+</tr>
+    </table>
     <br>
     <br>
 
