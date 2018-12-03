@@ -144,7 +144,7 @@
     <?php
       $sql = "SELECT * FROM usuario;";
       // $res = $con->query($sql);
-      $res = mysql_query($sql, $con);
+      $res = mysqli_query($sql, $con);
 
     ?>
 
@@ -163,9 +163,9 @@
        
        <?php
        if (!$res) {
-         die("mySQL error: ". mysql_error());
+         die("mySQL error: ". mysqli_error());
        }else{
-        while ($row = mysql_fetch_object($res)) {
+        while ($row = mysqli_fetch_object($res)) {
           echo '
             <tr>
               <td>'.$row->IdUsuario.'</td>

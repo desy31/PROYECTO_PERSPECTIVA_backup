@@ -26,7 +26,7 @@
 			$sql = "DELETE FROM `usuario` WHERE IdUsuario = '".$_GET['idusuario']."'";
 		}
 
-		if (mysql_query($sql, $con)) {
+		if (mysqli_query($sql, $con)) {
 			echo "<script>
 				alert('Usuario '".$accion."'');</script>";
 		}else{
@@ -39,7 +39,7 @@
 	}else if (isset($_GET['idusuario'])) {
 		$accion = "Eliminado";
 			$sql = "DELETE FROM `usuario` WHERE IdUsuario = '".$_GET['idusuario']."'";
-		if (mysql_query($sql, $con)) {
+		if (mysqli_query($sql, $con)) {
 			echo "<script>
 				alert('Usuario '".$accion."'');</script>";
 		}else{

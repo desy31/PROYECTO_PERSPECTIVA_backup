@@ -12,7 +12,7 @@
             $sql = "INSERT INTO pacientes(nombre,edad, estado_civil,telefono, direccion,identidad,fecha_nacimiento,nacionalidad,sexo)  VALUES ('".$_POST['nombre']."','".$_POST['edad']."','".$_POST['estadocivil']."','".$_POST['telefono']."','".$_POST['direccion']."','".$_POST['identidad']."','".$_POST['fecha']."','".$_POST['nacionalidad']."','".$_POST['sexo']."')";
 
 		}
-		if (mysql_query($sql, $con)) {
+		if (mysqli_query($sql, $con)) {
 			echo "<script>
 			location.replace('datos_generales.php');
 			</script>";
@@ -23,7 +23,7 @@
 	}else if (isset($_GET['id_paciente'])) {
 		$accion = "Eliminado";
 			$sql = "DELETE FROM `pacientes` WHERE id_paciente = '".$_GET['id_paciente']."'";
-		if (mysql_query($sql, $con)) {
+		if (mysqli_query($sql, $con)) {
 			echo "<script>
 				alert('Usuario '".$accion."'');</script>";
 		}else{

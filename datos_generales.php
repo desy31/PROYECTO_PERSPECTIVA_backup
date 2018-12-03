@@ -167,7 +167,7 @@
   <?php
       $pacientesql = "SELECT * FROM pacientes;";
       // $res = $con->query($sql);
-      $response = mysql_query($pacientesql, $con);
+      $response = mysqli_query($pacientesql, $con);
 
     ?>
     <table class="tabla" border="1"  width="85%" bgcolor="white">
@@ -181,9 +181,9 @@
  
 <?php
        if (!$response) {
-         die("mySQL error: ". mysql_error());
+         die("mySQL error: ". mysqli_error());
        }else{
-        while ($row = mysql_fetch_object($response)) {
+        while ($row = mysqli_fetch_object($response)) {
           echo '
             <tr>
               <td>'.$row->nombre.'</td>
