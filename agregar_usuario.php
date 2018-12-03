@@ -11,7 +11,7 @@
 
 		if ($es_admin && isset($_POST['Guardar'])) {
 			$accion = "Ingresado";
-			$sql = "INSERT INTO `usuario`(`IdUsuario`, `Usuario`, `Password`, `Rol`, `Nombre`, `Telefono` ) VALUES (NULL,'".$_POST['usuario']."','".$_POST['password']."','".$_POST['rol']."','".$_POST['nombre']."','".$_POST['telefono']."')";
+			$sql = "INSERT INTO `usuario`(`IdUsuario`, `Usuario`, `Password`, `Rol`, `Nombre`, `Telefono`) VALUES (NULL,'".$_POST['usuario']."','".$_POST['password']."','".$_POST['rol']."','".$_POST['nombre']."','".$_POST['telefono']."')";
 
 
 		}else if ($es_admin && isset($_POST['Modificar'])) {

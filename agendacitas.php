@@ -103,7 +103,7 @@
     <br>
     <strong>Agenda Médica Para Pacientes</strong>
 
-    <img  class="muela" src="img\cita.png">
+    <img  class="muela" src="img\agenda.png">
  
 <table border="1"  width="100%" bgcolor="white">
 <tr>

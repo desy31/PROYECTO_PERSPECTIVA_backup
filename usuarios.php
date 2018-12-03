@@ -104,22 +104,19 @@
     Identidad: <input type="text" name="identidad" placeholder="Indentidad" hspace="10">
      <br>
     Telefono:  <input type="text" name="telefono" placeholder="Telefono"hspace="79">
+    Fecha de Ingreso <input type="date" name="fecha" placeholder="Fecha">
+    <br>
+    Estado:  <input type="text" name="estado" placeholder="Estado"hspace="89"> 
+    Nivel de Privilegio: <select name="rol" hspace="60"> 
+      <option value="admin">admin</option>
+      <option value="normal">normal</option>
+  </select>
     <br>
     Usuario: <input type="text" name="usuario" placeholder="Usuario"hspace="85">
     <br>
     Contraseña:  <input type="text" name="password" placeholder="Contraseña"hspace="56">
     <br>
-    Fecha de Ingreso <input type="date" name="fecha" placeholder="Fecha" hspace="20" style="width:172;">
     <br>
-    Estado:  <input type="text" name="estado" placeholder="Estado"hspace="89"> 
-    <br>
-     Nivel de Privilegio: <select name="rol" style="width:170;"> 
-      <option value="admin" >admin</option>
-      <option value="normal">normal</option>
-  </select>
-    <br>
-    <br>
-    
 
    <div class="botones">
     <input type="submit" name="Guardar" value="Guardar" style='width:90px; height:35px' >
