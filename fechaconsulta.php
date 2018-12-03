@@ -62,7 +62,7 @@
 
     <h2 class="titulo">AGREGAR CITA</h2>
           <p class="sub-titulo">FECHA PARA PROXIMA CITA</p>
-          <img  class="muela" src="img\cita.png">
+          <img  class="muela" src="img\agenda.png">
 
 <section class="consultas">
   
