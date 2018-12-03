@@ -19,7 +19,7 @@
     border: 0px ;
     width: 100%;
     height: 500px;
-    background-image:url("/PROYECTO_PERSPECTIVA_backup/img/uten.jpg");
+    background-image:url("/img/uten.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
     }
@@ -167,7 +167,7 @@
   <?php
       $pacientesql = "SELECT * FROM pacientes;";
       // $res = $con->query($sql);
-      $response = mysqli_query($pacientesql, $con);
+      $response = mysqli_query($con, $pacientesql);
 
     ?>
     <table class="tabla" border="1"  width="85%" bgcolor="white">

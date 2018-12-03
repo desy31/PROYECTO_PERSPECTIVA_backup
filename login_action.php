@@ -11,8 +11,8 @@
     $encpassword =encrypt_decrypt($_POST['password'],true);
     
     $sql="SELECT * FROM usuario WHERE Usuario = '".$_POST['nombre']."' && Password = '".$encpassword."'";
-    $res=mysqli_query($sql, $con);
-    $row=mysqli_fetch_object($res);
+    $res=mysqli_query($con, $sql);
+    $row = mysqli_fetch_object($res);
     $logged = mysqli_num_rows($res);
     if ($logged==0) {
       echo "<script> alert('Usuario o Contraseña incorrectos'); location.replace('LOGI.php'); </script>";

@@ -17,7 +17,7 @@
     border: 0px ;
     width: 100%;
     height: 500px;
-    background-image:url("/PROYECTO_PERSPECTIVA_backup/img/uten.jpg");
+    background-image:url("/img/uten.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
     }
@@ -144,7 +144,7 @@
     <?php
       $sql = "SELECT * FROM usuario;";
       // $res = $con->query($sql);
-      $res = mysqli_query($sql, $con);
+      $res = mysqli_query($con, $sql);
 
     ?>
 

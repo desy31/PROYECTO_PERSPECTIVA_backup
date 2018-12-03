@@ -17,7 +17,7 @@
     border: 0px ;
     width: 600px;
     height: 500px;
-    background-image:url("/PROYECTO_PERSPECTIVA_backup/img/uten.jpg");
+    background-image:url("/img/uten.jpg");
     background-repeat: no-repeat;
     background-size: 100%;
     }
