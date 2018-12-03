@@ -120,7 +120,7 @@
     <input type="submit" name="Guardar" value="Guardar" style='width:90px; height:35px' >
     <input type="submit" name="Modificar" value="Modificar"style='width:90px; height:35px' >
     <input type="submit" name="Eliminar" value="Eliminar"style='width:90px; height:35px' >
-    <input type="button" name="Limpiar" value="Limpiar" style='width:90px; height:35px'>
+    <input type="button"id="limpiarbtn" name="Limpiar" value="Limpiar" style='width:90px; height:35px'>
     <input type="button" name="Atras" value="Atras" style='width:90px; height:35px' onclick="location.href = 'principal.php'">
 
   </div>
@@ -179,6 +179,13 @@
 </section>
 
 </div>
-
+  <script>
+    var btn = document.querySelector('#limpiarbtn');
+    var actualForm = document.getElementsByTagName('form')[0];
+    btn.addEventListener('click',function(e){
+      
+      actualForm.reset();
+    })
+  </script>
 </body>
 

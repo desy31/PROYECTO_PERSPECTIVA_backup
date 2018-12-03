@@ -14,7 +14,8 @@
 		}
 		if (mysql_query($sql, $con)) {
 			echo "<script>
-				alert('Usuario '".$accion."'');</script>";
+			location.replace('datos_generales.php');
+			</script>";
 		}else{
 			echo "<script> alert('Error al '".$accion."' usuario');</script>";
 		}
